@@ -5,13 +5,32 @@ var tableBody = document.getElementById("tableBody");
 var bookmarkList = [];
 
 // load from localStorage if exists
-if (localStorage.getItem("bookmarkList") != null) {
+if (localStorage.getItem("bookmarkList") !== null) {
   bookmarkList = JSON.parse(localStorage.getItem("bookmarkList"));
   displayBookmark();
 }
 
+// regex patterns
+var nameRegex = /^[A-Za-z ]{3,}$/; 
+var urlRegex = /^(https?:\/\/)?([\w\-])+(\.[\w\-]+)+[/#?]?.*$/;
+
+
 // add url function
 function addUrl() {
+var nameValue = bookmarkNameInput.value.trim();
+  var urlValue = webSiteUrlInput.value.trim();
+
+  // validation
+  if (!nameRegex.test(nameValue)) {
+    alert("Bookmark name must contain at least 3 letters and only letters/spaces.");
+    return;
+  }
+
+  if (!urlRegex.test(urlValue)) {
+    alert("Please enter a valid URL (e.g. https://example.com)");
+    return;
+  }
+
   var urlObject = {
     name: bookmarkNameInput.value.trim(),
     url: webSiteUrlInput.value.trim()

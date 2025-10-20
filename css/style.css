@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color:#F5EADC;
+}
+
+h1{
+    font-family: Pacifico, cursive;
+    color: rgb(53, 46, 40);
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 60px;
+    position: relative;
+    display: inline-block;
+    transition: height 350ms;
+;
+}
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 5px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 60%;
+}
+
+.bookmark-details h2{
+    font-family: Righteous, cursive;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    /* background-image: ; */
+  background: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+
+::selection{
+    background: #FEC260;
+    color: black;
+}
+
+#visitBtn{
+    background-color: #9eb23b
+}
+
+#deleteBtn{
+    background-color: #e94b3c
+}
+#visitBtn:hover{
+    background-color: #7d8c2e;
+}
+#deleteBtn:hover{
+    background-color: #c0392b;
+}

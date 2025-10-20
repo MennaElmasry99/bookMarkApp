@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book mark</title>
+    <link rel="icon" type="image/x-icon" href="./images/bookmaek.jpg">
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- stylr css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="bookmark-details py-5">
+        <div class="container text-center">
+            <h1>Bookmarker</h1>
+            <div style="border-top: 2px dotted black; width: 100%;" class="my-5"></div>
+            <h2>Bookmark your favorite sites</h2>
+            <div class="first-input my-4 text-start d-block">
+                <label for="bookmarkName" class="text-start"><i class="fa-solid fa-book-bookmark pe-2"></i> Site
+                    Name</label>
+                <input type="text" id="bookmarkName" placeholder="bookmark Name" name="bookmarkName"
+                    class="w-100 p-2 d-block my-2 rounded-3 form-control">
+            </div>
+            <div class="first-input my-4 text-start d-block">
+                <label for="webSiteUrl" class="text-start"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                <input type="url" id="webSiteUrl" placeholder="web Site Url" name="webSiteUrl"
+                    class="w-100 p-2 form-control d-block my-2 rounded-3">
+            </div>
+            <button onclick="addUrl()" type="submit" class="btn btn-danger py-1 px-4 mt-2"
+                id="submitBtn">Submit</button>
+            <div style="border-top: 2px dotted black; width: 100%;" class="my-5"></div>
+        </div>
+    </section>
+
+    <section class="show-bookmark">
+        <div class="container text-center">
+            <table class="w-100 bg-white p-2 rounded-1" style="border-collapse: separate; border-spacing: 0 12px;">
+                <thead class="border-bottom border-2">
+                    <tr >
+                        <th class="py-1 text-center">index</th>
+                        <th class="py-1 text-center">webSite Name</th>
+                        <th class="py-1 text-center">visit</th>
+                        <th class="py-1 text-center">delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="pt-3">
+                    
+                </tbody>
+            </table>
+    </section>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
